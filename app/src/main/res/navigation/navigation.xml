@@ -1,6 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/navigation">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/landingpage">
 
+    <fragment
+        android:id="@+id/landingpage"
+        android:name="com.example.canteenapplication.Landingpage"
+        android:label="fragment_landingpage"
+        tools:layout="@layout/fragment_landingpage" >
+        <action
+            android:id="@+id/action_landingpage_to_loginpage"
+            app:destination="@id/loginpage" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginpage"
+        android:name="com.example.canteenapplication.Loginpage"
+        android:label="fragment_loginpage"
+        tools:layout="@layout/fragment_loginpage" >
+        <action
+            android:id="@+id/action_loginpage_to_registrationpage"
+            app:destination="@id/registrationpage" />
+        <action
+            android:id="@+id/action_loginpage_to_adminpage"
+            app:destination="@id/adminpage" />
+        <action
+            android:id="@+id/action_loginpage_to_studentpage"
+            app:destination="@id/studentpage" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationpage"
+        android:name="com.example.canteenapplication.Registrationpage"
+        android:label="fragment_registrationpage"
+        tools:layout="@layout/fragment_registrationpage" >
+        <action
+            android:id="@+id/action_registrationpage_to_loginpage"
+            app:destination="@id/loginpage" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminpage"
+        android:name="com.example.canteenapplication.Adminpage"
+        android:label="fragment_adminpage"
+        tools:layout="@layout/fragment_adminpage" />
+    <fragment
+        android:id="@+id/studentpage"
+        android:name="com.example.canteenapplication.Studentpage"
+        android:label="fragment_studentpage"
+        tools:layout="@layout/fragment_studentpage" />
 </navigation>
