@@ -14,17 +14,16 @@
         android:text="@string/canteen_app"
         android:textColor="@color/black"
         android:textAllCaps="true"
-        android:layout_marginTop="250dp"
         android:textSize="38sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/bt_button_admin"
+        app:layout_constraintBottom_toTopOf="@id/bt_admin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/bt_button_admin"
+        android:id="@+id/bt_admin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="40dp"
@@ -34,10 +33,11 @@
         android:text="@string/admin"
         android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@+id/tv_login_page_title"
+        app:layout_constraintBottom_toTopOf="@+id/bt_user"
         tools:ignore="VisualLintButtonSize" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/bt_button_user"
+        android:id="@+id/bt_user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -45,7 +45,8 @@
         android:background="@drawable/round_btn"
         android:text="@string/user"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/bt_button_admin"
+        app:layout_constraintTop_toBottomOf="@+id/bt_admin"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="VisualLintButtonSize" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,10 +19,10 @@ class Landingpage : Fragment() {
     ): View {
         binding = FragmentLandingpageBinding.inflate(inflater, container, false)
 
-        binding.btButtonAdmin.setOnClickListener {
+        binding.btAdmin.setOnClickListener {
             findNavController().navigate(LandingpageDirections.actionLandingpageToAdminLoginpage())
         }
-        binding.btButtonUser.setOnClickListener {
+        binding.btUser.setOnClickListener {
             findNavController().navigate(LandingpageDirections.actionLandingpageToUserloginpage3())
         }
         return binding.root
