@@ -11,5 +11,7 @@
     <string name="register">Register</string>
     <string name="username">Username</string>
     <string name="submit">Submit</string>
+    <string name="userpage">USERPAGE</string>
+    <string name="adminpage">adminpage</string>
 
 </resources>

@@ -11,23 +11,13 @@
         android:label="fragment_landingpage"
         tools:layout="@layout/fragment_landingpage" >
         <action
-            android:id="@+id/action_landingpage_to_loginpage"
-            app:destination="@id/loginpage" />
-    </fragment>
-    <fragment
-        android:id="@+id/loginpage"
-        android:name="com.example.canteenapplication.Loginpage"
-        android:label="fragment_loginpage"
-        tools:layout="@layout/fragment_loginpage" >
+            android:id="@+id/action_landingpage_to_adminLoginpage"
+            app:destination="@id/adminLoginpage"
+            app:enterAnim="@android:anim/slide_out_right" />
         <action
-            android:id="@+id/action_loginpage_to_registrationpage"
-            app:destination="@id/registrationpage" />
-        <action
-            android:id="@+id/action_loginpage_to_adminpage"
-            app:destination="@id/adminpage" />
-        <action
-            android:id="@+id/action_loginpage_to_studentpage"
-            app:destination="@id/studentpage" />
+            android:id="@+id/action_landingpage_to_userloginpage3"
+            app:destination="@id/userloginpage3"
+            app:enterAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/registrationpage"
@@ -35,8 +25,13 @@
         android:label="fragment_registrationpage"
         tools:layout="@layout/fragment_registrationpage" >
         <action
-            android:id="@+id/action_registrationpage_to_loginpage"
-            app:destination="@id/loginpage" />
+            android:id="@+id/action_registrationpage_to_userloginpage3"
+            app:destination="@id/userloginpage3"
+            app:enterAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/action_registrationpage_to_adminLoginpage"
+            app:destination="@id/adminLoginpage"
+            app:enterAnim="@android:anim/slide_in_left" />
     </fragment>
     <fragment
         android:id="@+id/adminpage"
@@ -48,4 +43,32 @@
         android:name="com.example.canteenapplication.Studentpage"
         android:label="fragment_studentpage"
         tools:layout="@layout/fragment_studentpage" />
+    <fragment
+        android:id="@+id/adminLoginpage"
+        android:name="com.example.canteenapplication.AdminLoginpage"
+        android:label="fragment_adminloginpage"
+        tools:layout="@layout/fragment_adminloginpage" >
+        <action
+            android:id="@+id/action_adminLoginpage_to_registrationpage"
+            app:destination="@id/registrationpage"
+            app:enterAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_adminLoginpage_to_adminpage"
+            app:destination="@id/adminpage"
+            app:enterAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/userloginpage3"
+        android:name="com.example.canteenapplication.Userloginpage"
+        android:label="fragment_userloginpage"
+        tools:layout="@layout/fragment_userloginpage" >
+        <action
+            android:id="@+id/action_userloginpage3_to_registrationpage"
+            app:destination="@id/registrationpage"
+            app:enterAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_userloginpage3_to_studentpage"
+            app:destination="@id/studentpage"
+            app:enterAnim="@android:anim/slide_out_right" />
+    </fragment>
 </navigation>
