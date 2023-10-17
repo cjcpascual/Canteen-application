@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-class Adminpage : Fragment() {
+class AdminPageFragment : Fragment() {
 
 
     override fun onCreateView(

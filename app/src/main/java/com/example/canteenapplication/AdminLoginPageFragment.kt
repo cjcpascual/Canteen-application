@@ -8,24 +8,23 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.canteenapplication.databinding.FragmentAdminloginpageBinding
 
-class AdminLoginpage : Fragment() {
+class AdminLoginPageFragment : Fragment() {
 
     private lateinit var binding: FragmentAdminloginpageBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentAdminloginpageBinding.inflate(inflater,container,false)
+    ): View {
+        binding = FragmentAdminloginpageBinding.inflate(inflater, container, false)
 
-
-        binding.btLogin.setOnClickListener{
-            findNavController().navigate(AdminLoginpageDirections.actionAdminLoginpageToAdminpage())
+        binding.btLogin.setOnClickListener {
+            findNavController().navigate(AdminLoginPageFragmentDirections.actionAdminLoginpageToAdminpage())
         }
-        binding.tvRegistration.setOnClickListener{
-            findNavController().navigate(AdminLoginpageDirections.actionAdminLoginpageToRegistrationpage())
+        binding.tvRegistration.setOnClickListener {
+            findNavController().navigate(AdminLoginPageFragmentDirections.actionAdminLoginpageToRegistrationpage())
         }
         binding.btLogin.setOnClickListener {
-            findNavController().navigate(AdminLoginpageDirections.actionAdminLoginpageToAdminpage())
+            findNavController().navigate(AdminLoginPageFragmentDirections.actionAdminLoginpageToAdminpage())
         }
         return binding.root
     }
