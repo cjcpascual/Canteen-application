@@ -8,10 +8,13 @@
     <string name="login">Login</string>
     <string name="password">Password</string>
     <string name="registration" />
-    <string name="register">Register</string>
-    <string name="username">Username</string>
+    <string name="register"><u>Sign Up</u></string>
+    <string name="Emailaddress">Email Address</string>
     <string name="submit">Submit</string>
     <string name="userpage">USERPAGE</string>
     <string name="adminpage">adminpage</string>
+    <string name="full_name">Full Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="create_account">Create Account</string>
 
 </resources>

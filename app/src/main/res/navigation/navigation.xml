@@ -40,7 +40,7 @@
         tools:layout="@layout/fragment_adminpage" />
     <fragment
         android:id="@+id/studentpage"
-        android:name="com.example.canteenapplication.Studentpage"
+        android:name="com.example.canteenapplication.studentpage.Studentpage"
         android:label="fragment_studentpage"
         tools:layout="@layout/fragment_studentpage" />
     <fragment
