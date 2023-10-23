@@ -19,5 +19,8 @@
     <string name="add">Add</string>
     <string name="add_to_cart">Add to Cart</string>
     <string name="shop">Shop</string>
+    <string name="successfully_logged_in">Successfully Logged In!</string>
+    <string name="login_failed">Login Failed!</string>
+    <string name="registered_successfully">Registered Successfully</string>
 
 </resources>

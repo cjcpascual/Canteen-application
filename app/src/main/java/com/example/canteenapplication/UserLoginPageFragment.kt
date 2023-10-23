@@ -8,54 +8,53 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
-import com.example.canteenapplication.databinding.FragmentAdminLoginPageBinding
+import com.example.canteenapplication.databinding.FragmentUserLoginPageBinding
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
 import com.google.firebase.database.FirebaseDatabase
 
 
-class AdminLoginPageFragment : Fragment() {
+class UserLoginPageFragment : Fragment() {
 
-    private lateinit var binding: FragmentAdminLoginPageBinding
-
+    private lateinit var binding: FragmentUserLoginPageBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentAdminLoginPageBinding.inflate(inflater, container, false)
+        binding = FragmentUserLoginPageBinding.inflate(inflater, container, false)
         val view = binding.root
 
 
-        binding.loginButton.setOnClickListener {
-            val emailAddress = binding.emailAddressEditText.text.toString()
-            val password = binding.passwordEditText.text.toString()
+        binding.userLoginButton.setOnClickListener {
+            val userEmailAddress = binding.userEmailAddressEditText.text.toString()
+            val userPassword = binding.userPasswordEditText.text.toString()
 
-            if (emailAddress.isEmpty() || password.isEmpty()) {
+            if (userEmailAddress.isEmpty() || userPassword.isEmpty()) {
                 Toast.makeText(requireContext(), "Invalid  email and password",Toast.LENGTH_SHORT).show()
             } else {
-                signInWithFirebase(emailAddress, password)
+                signInWithFirebase(userEmailAddress, userPassword)
             }
 
 
         }
-        binding.registrationButton.setOnClickListener {
-            findNavController().navigate(AdminLoginPageFragmentDirections.actionAdminLoginPageToAdminRegistrationPageFragment())
+        binding.userRegistrationButton.setOnClickListener {
+            findNavController().navigate(UserLoginPageFragmentDirections.actionUserLoginPageToUserRegistrationPageFragment())
         }
         return view
     }
 
-    private fun signInWithFirebase(emailAddress: String, password: String) {
+    private fun signInWithFirebase(userEmailAddress: String, userPassword: String) {
         val auth = FirebaseAuth.getInstance()
-        auth.signInWithEmailAndPassword(emailAddress, password)
+        auth.signInWithEmailAndPassword(userEmailAddress, userPassword)
             .addOnCompleteListener(requireActivity()){ task ->
                 if(task.isSuccessful){
                     Toast.makeText(context, "Login Successful",Toast.LENGTH_SHORT).show()
-                    findNavController().navigate(AdminLoginPageFragmentDirections.actionAdminLoginPageToAdminPage())
+                    findNavController().navigate(UserLoginPageFragmentDirections.actionUserLoginPageToStudentPage())
                 } else {
                     Toast.makeText(requireContext(),"Login Failed. Check your Email and Password", Toast.LENGTH_SHORT).show()
-                    binding.emailAddressEditText.text?.clear()
-                    binding.passwordEditText.text?.clear()
+                    binding.userEmailAddressEditText.text?.clear()
+                    binding.userPasswordEditText.text?.clear()
                 }
             }
     }

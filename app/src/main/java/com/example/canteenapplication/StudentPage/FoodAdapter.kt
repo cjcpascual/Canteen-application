@@ -1,6 +1,5 @@
-package com.example.canteenapplication.studentpage
+package com.example.canteenapplication.StudentPage
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil

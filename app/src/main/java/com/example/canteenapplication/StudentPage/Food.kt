@@ -1,4 +1,4 @@
-package com.example.canteenapplication.studentpage
+package com.example.canteenapplication.StudentPage
 
 import androidx.annotation.DrawableRes
 import com.example.canteenapplication.R
@@ -19,31 +19,31 @@ val foods = listOf(
     Food(
         id = 2,
         image = R.drawable.shanghai_rolled,
-        name = "Shanghai Na Tutong"
+        name = "Siomai"
     ),
     Food(
         id = 3,
         image = R.drawable.logo,
-        name = "Shanghai City"
+        name = "Donut"
     ),
     Food(
         id = 4,
         image = R.drawable.shanghai_rolled,
-        name = "Shanghai Ni Carl"
+        name = "Palabok"
     ),
     Food(
         id = 5,
         image = R.drawable.logo,
-        name = "Shanghai na Pangit"
+        name = "Pansit"
     ),
     Food(
         id = 6,
         image = R.drawable.logo,
-        name = "jjjj"
+        name = "Dynamite"
     ),
     Food(
         id = 7,
         image = R.drawable.logo,
-        name = "jj"
+        name = "Turon"
     )
 )

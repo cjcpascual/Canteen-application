@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradientjett"
-    tools:context=".Landingpage">
+    android:background="@drawable/gradient_jett"
+    tools:context=".LandingPageFragment">
 
 
     <ImageView
