@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.canteenapplication.databinding.ItemBinding
 
 class FoodAdapter(
@@ -40,7 +41,8 @@ class FoodAdapter(
         fun onBind(item: Food) {
             this.item = item
             binding.quantity.quantity = item.quantity
-            binding.image.setImageResource(item.image)
+            Glide.with(itemView).load(item.imageUrl).into(binding.image);
+
             binding.item.text = item.name
         }
     }
@@ -56,7 +58,7 @@ class FoodAdapter(
             oldItem: Food,
             newItem: Food
         ): Boolean = oldItem.name == newItem.name &&
-                oldItem.image == newItem.image &&
+                oldItem.imageUrl == newItem.imageUrl &&
                 oldItem.quantity == newItem.quantity
     }
 }
