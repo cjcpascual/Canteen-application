@@ -22,5 +22,19 @@
     <string name="successfully_logged_in">Successfully Logged In!</string>
     <string name="login_failed">Login Failed!</string>
     <string name="registered_successfully">Registered Successfully</string>
+    <string name="add_credit">Add Credit</string>
+    <string name="credit_amount_p0_00">Credit Amount: P0.00</string>
+    <string name="enter_credit_amount">Enter credit amount</string>
+    <string name="credit_amount_0_00">Credit Amount: ₱0.00</string>
+    <string name="clear_cart">Clear Cart</string>
+    <string name="_0_00">₱0.00</string>
+    <string name="shanghai_roll">Shanghai roll</string>
+    <string name="buy_items">Buy Items</string>
+    <string name="close_cart">Close Cart</string>
+    <string name="view_purchases">View Purchases</string>
+    <string name="credit_amount">Credit Amount</string>
+    <string name="user_s_email">User\'s Email</string>
+    <string name="open_cart">Open Cart</string>
+    <string name="welcome">Welcome</string>
 
 </resources>

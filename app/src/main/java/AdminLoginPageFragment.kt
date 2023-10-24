@@ -1,3 +1,4 @@
+/*
 package com.example.canteenapplication
 
 import android.app.AlertDialog
@@ -89,3 +90,4 @@ class AdminLoginPageFragment : Fragment() {
 
 
 
+*/

@@ -1,3 +1,4 @@
+/*
 package com.example.canteenapplication.Registrations
 
 
@@ -71,6 +72,7 @@ class AdminRegistrationPageFragment : Fragment() {
                     databaseReference.child(userId ?: "").setValue(userMap)
                     Toast.makeText(context,"Registered Successful", Toast.LENGTH_SHORT).show()
 
+
                     findNavController().navigate(AdminRegistrationPageFragmentDirections.actionAdminRegistrationPageFragment2ToAdminLoginPage())
                 }
                 else {
@@ -104,3 +106,4 @@ class AdminRegistrationPageFragment : Fragment() {
 
 
 
+*/

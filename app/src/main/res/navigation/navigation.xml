@@ -31,7 +31,7 @@
         android:label="fragment_adminPage"
         tools:layout="@layout/fragment_adminpage" />
     <fragment
-        android:id="@+id/studentPage"
+        android:id="@+id/studentPageFragment"
         android:name="com.example.canteenapplication.StudentPage.StudentPageFragment"
         android:label="fragment_studentPage"
         tools:layout="@layout/fragment_student_page" />
@@ -61,8 +61,8 @@
         android:label="fragment_userLoginPage"
         tools:layout="@layout/fragment_user_login_page">
         <action
-            android:id="@+id/action_userLoginPage_to_studentPage"
-            app:destination="@id/studentPage"
+            android:id="@+id/action_userLoginPage_to_studentPageFragment"
+            app:destination="@id/studentPageFragment"
             app:enterAnim="@anim/anim_slide_in_right"
             app:exitAnim="@anim/anim_slide_out_left"
             app:popEnterAnim="@anim/anim_slide_in_deep_left"

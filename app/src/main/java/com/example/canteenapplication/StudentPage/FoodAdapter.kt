@@ -1,5 +1,6 @@
 package com.example.canteenapplication.StudentPage
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -38,12 +39,15 @@ class FoodAdapter(
             }
         }
 
+        @SuppressLint("SetTextI18n")
         fun onBind(item: Food) {
             this.item = item
             binding.quantity.quantity = item.quantity
-            Glide.with(itemView).load(item.imageUrl).into(binding.image);
+            Glide.with(itemView).load(item.imageUrl).into(binding.image)
 
             binding.item.text = item.name
+            binding.price.text = "₱${item.price}"
+
         }
     }
 
